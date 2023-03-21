@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "Order";
+}
+
+<h2>Order</h2>
+
+<center>
+    <br /><br />
+    @if (@TempData["msg"] != null)
+    {
+        <span class="alert alert-info">@TempData["msg"]</span>
+    }
+    <br /><br /><br />
+    <!--<table class="table table-bordered">
+        @foreach (var or in Model)
+        {
+            <tr>
+                <td>@or.restaurant_id</td>
+                <td>@or.name</td>
+                <td>@or.quantity</td>
+                <td>@or.preserve</td>
+                <td>@or.status</td>
+                <td>@or.assign</td>
+            </tr>
+        }
+
+    </table>-->
+    <a href="/Index/RestaurantDashboard">Back To Restaurant Dashboard</a>
+    <br>
+    <a href="/Index/Login"> Logout</a>
+    </br>
+</center>

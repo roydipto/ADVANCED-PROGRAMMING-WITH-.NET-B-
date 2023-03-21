@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "EmployeeAdmin";
+    Layout = "~/Views/Shared/MyLay.cshtml";
+}
+
+<style>
+    body {
+        background-color: coral;
+    }
+</style>
+
+<h2>Employee Admin</h2>
+
+<a href="/Index/AdminDashboard">Requests</a>
+<a href="/Index/AdminHistory"> History </a>
+<a href="/Index/EmployeeAdmin"> Employees </a>
+<a href="/Index/Login"> Logout</a>
+<br />
+<br />
+<br />
+<table class="table table-bordered">
+    @foreach (var t in Model)
+    {
+        if (t.type == "Employee")
+        {
+            <tr>
+                <td>@t.id</td>
+                <td>@t.name</td>
+                <td>@t.contact</td>
+                <td>@t.address</td>
+                <td>@t.email</td>
+                <td>@t.password</td>
+                <td>@t.type</td>
+            </tr>
+
+        }
+
+    }
+
+</table>

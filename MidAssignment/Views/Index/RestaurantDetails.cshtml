@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewBag.Title = "RestaurantDetails";
+    Layout = "~/Views/Shared/MyLay.cshtml";
+}
+
+<style>
+    body {
+        background-color: coral;
+    }
+</style>
+
+<h2>Restaurant Details</h2>
+
+<a class="navbar-brand" href="/Index/RestaurantDashboard">Requests</a>
+<a class="navbar-brand" href="/Index/RestaurantDetails"> Details </a>
+<a class="navbar-brand" href="/Index/Login"> Logout</a>
+<br />
+<br />
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Contact</th>
+        <th>Address</th>
+        <th>Email</th>
+        <th>Password</th>
+        <th>Type</th>
+        <!--<th>Action</th>-->
+    </tr>
+    @foreach (var or in Model)
+    {
+
+
+        <tr>
+            <td>@or.id</td>
+            <td>@or.name</td>
+            <td>@or.contact</td>
+            <td>@or.address</td>
+            <td>@or.email</td>
+            <td>@or.password</td>
+            <td>@or.type</td>
+        </tr>
+    }
+    }
+
+</table>

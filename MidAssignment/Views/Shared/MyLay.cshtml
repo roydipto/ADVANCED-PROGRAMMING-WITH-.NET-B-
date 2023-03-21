@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewBag.Title = "MyLay";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>_Admin</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="~/Content/style.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+    @*Header part html start*@
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                </div>
+                <div class="col-md-6">
+                    <div class="logout">
+                        <p href="#" style=" text-align: right; margin-top: 26px; font-size: 20px; color:black;">
+                            <a href="/Home/HomePage" style="text-align: right; margin-top: 2px; font-size: 18px; color:black; padding:0 20px;">Home</a>
+                            <a href="/Home/About" style="text-align: right; margin-top: 2px; font-size: 18px; color:black; padding:0 20px;">About</a>
+                            <a href="/Home/Contact" style="text-align: right; margin-top: 2px; font-size: 18px; color:black; padding:0 20px;">Contact</a>
+                            <a href="/Home/Index" style="text-align: right; margin-top: 2px; font-size: 18px; color:black; padding:0 20px;"> Index </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+    <footer>
+        <div class="container">
+            <hr />
+            <p> &copy;Copyrights are provided by Dipto @DateTime.Now.Year</p>
+        </div>
+    </footer>
+</body>
+</html>

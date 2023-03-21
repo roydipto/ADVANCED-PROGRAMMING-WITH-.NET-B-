@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewBag.Title = "AdminHistory";
+    Layout = "~/Views/Shared/MyLay.cshtml";
+}
+
+<style>
+    body {
+        background-color: coral;
+    }
+</style>
+
+<h2>Admin History</h2>
+
+<a href="/Index/RestaurantDashboard">Requests</a>
+<a href="/Index/AdminHistory"> History </a>
+<a href="/Index/RestaurantAdmin"> Restaurants </a>
+<a href="/Index/EmployeeAdmin"> Employees </a>
+<a href="/Index/Login"> Logout</a>
+<br />
+<br />
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Restaurant ID</th>
+        <th>Name</th>
+        <th>Quantity</th>
+        <th>Preserve</th>
+        <th>Status</th>
+        <th>Assigned</th>
+        <!--<th>Action</th>-->
+    </tr>
+    @foreach (var or in Model)
+    {
+
+        <tr>
+            <td>@or.id</td>
+            <td>@or.name</td>
+            <td>@or.quantity</td>
+            <td>@or.preserve</td>
+            <td>@or.status</td>
+            <td>@or.assign</td>
+            <td>@or.restaurant_id</td>
+        </tr>
+
+    }
+
+</table>

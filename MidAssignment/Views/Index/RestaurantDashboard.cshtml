@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.Title = "Restaurant Dashboard";
+    Layout = "~/Views/Shared/MyLay.cshtml";
+}
+
+<style>
+    body {
+        background-color: coral;
+    }
+</style>
+<h2>Restaurant Dashboard</h2>
+
+<a href="/Index/AdminHistory"> Request </a>
+    <a href="/Index/Login"> Logout</a>
+<br />
+<br />
+<form action="" method="post">
+
+    Restaurant ID:
+    <input type="text" name="RestaurantID" class="form-control" value="" /> <br />
+
+    Name:
+    <input type="text" placeholder="Enter the name of the food" name="name" class="form-control" /> <br />
+
+    Quantity:
+    <input type="text" placeholder="Enter the quantity" name="quantity" class="form-control" /> <br />
+
+    Preserve:
+    <input type="text" placeholder="Enter the time in mins/hrs" name="preserve" class="form-control" /> <br />
+
+    Status:
+    <select id="type" name="status" class="btn btn-secondary dropdown-toggle">
+        <option value="Confirm Pickup">Confirm Pickup</option>
+        <option value="Deny Pickup">Deny Pickup</option>
+    </select> <br />
+
+    Assign:
+    <input type="text" placeholder="Not needed" name="assign" class="form-control" /> <br />
+
+    <input type="submit" value="Request" class="btn btn-success" />
+
+</form>

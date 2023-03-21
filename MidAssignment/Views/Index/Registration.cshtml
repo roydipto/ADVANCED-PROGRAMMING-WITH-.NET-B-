@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewBag.Title = "Registration";
+    Layout = "~/Views/Shared/MyLay.cshtml";
+}
+<style>
+    body {
+        background-color: coral;
+    }
+</style>
+
+<h2>Sign Up</h2>
+
+<form action="" method="post">
+
+    Name:
+    <input type="text" placeholder="Enter your Name" name="name" class="form-control" /> <br />
+
+    Contact number:
+    <input type="text" placeholder="Enter your conatct number" name="contact" class="form-control" /> <br />
+
+    Address:
+    <input type="text" placeholder="Enter your address/location" name="address" class="form-control" /> <br />
+
+    E-mail:
+    <input type="text" placeholder="Enter your e-mail" name="email" class="form-control" /> <br />
+
+    Password:
+    <input type="text" placeholder="Enter your password" name="password" class="form-control" /> <br />
+
+    Sign Up As:
+    <select id="type" name="Type" class="btn btn-secondary dropdown-toggle">
+        <option value="Admin">Admin</option>
+        <option value="Restaurant">Restaurant</option>
+        <option value="Employee">Employee</option>
+    </select>
+    <br />
+    <div class="center">
+        <input type="submit" value="Sign Up" class="btn btn-success"/>
+    </div>
+</form>
+
